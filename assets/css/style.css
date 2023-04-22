@@ -193,6 +193,11 @@ img{
   width: 85%;
 }
 
+.dropdown .dropdown-item img{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .overlay {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
@@ -222,20 +227,23 @@ img{
   flex-direction: column;
   /* text-align: center; */
   justify-content: start;
-  width: 45%;
-  margin-right: 3rem;
+  width: 40%;
+  /* margin-right: 3rem; */
 }
 
 
 .hero .title {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
-  font-size: 4.8rem;
+  font-size: 4.25rem;
   line-height: 1;
 }
 
 .hero .desc{
   margin-bottom: 2.5rem;
+  font-size: 18px;
+  word-wrap: break-word;
+  text-align: justify;
 }
 
 .hero .btn-primary {
@@ -244,11 +252,11 @@ img{
 }
 
 .client{
-  padding: 2.5rem 0 0;
+  padding: 7rem 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: end;
+  align-self: end;
   width: 100%;
 }
 
@@ -259,7 +267,10 @@ img{
 
 .hero-x .hero-img{
   background:url('../images/image-hero-desktop.png') no-repeat;
-  height:400px;
+  height:550px;
+  width: 50%;
+  background-size: contain;
+  background-position: right;
 }
 
 @media (max-width: 960px) {
@@ -331,6 +342,12 @@ img{
     margin-right: 0;
   }
 
+  .dropdown:hover .dropdown-menu{
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -399,4 +416,12 @@ img{
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+
+/* attribution */
+.attribution a{
+  margin-top: 2.6rem;
+  display: inline-block;
+  color: var(--af-black);
 }

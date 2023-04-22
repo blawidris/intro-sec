@@ -146,6 +146,11 @@ img{
   width: 150px;
 }
 
+
+.dropdown:first-child .dropdown-menu{
+  left: -1.5rem;
+}
+
 .dropdown-menu .dropdown-item + .dropdown-item {
   margin: 20px 0 0;
 }
@@ -155,7 +160,7 @@ img{
     margin-top: 0;
 } */
 
-.dropdown:hover .dropdown-menu {
+.dropdown .dropdown-menu.show {
   display: flex;
   /* width: 100%; */
 }
@@ -348,11 +353,23 @@ img{
     background-color: transparent;
     box-shadow: none;
   }
+
+  .hero-x .hero-img{
+   
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
   .main-header .navbar-brand {
     padding-right: 0;
+  }
+
+  .hero{
+    padding-top: 1rem;
   }
 
   .hero .title {
@@ -370,7 +387,13 @@ img{
     width: 70px;
   }
 
-
+  .hero-x .hero-img{
+    background:url('../images/image-hero-mobile.png') no-repeat;
+    /* height:550px;
+    width: 50%; */
+    background-size: contain;
+    background-position: left;
+  }
   
 }
 
@@ -420,6 +443,10 @@ img{
 
 
 /* attribution */
+.attribution{
+  position: fixed;
+  bottom: 0;
+}
 .attribution a{
   margin-top: 2.6rem;
   display: inline-block;
